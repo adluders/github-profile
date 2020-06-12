@@ -1,0 +1,128 @@
+@import "./util";
+
+body {
+  background-color: $dark-bg;
+}
+
+// Navbar
+.Navbar {
+  margin: 2rem;
+  &__Items {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__Item {
+    color: $dark-text;
+    margin: 1rem;
+    font-family: $main-font;
+  }
+}
+
+// Search Box
+.SearchBox {
+  padding: 2rem;
+  h1 {
+    color: $dark-text;
+    text-align: center;
+    margin: 2rem auto;
+  }
+  form {
+    // border: solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+      width: 70%;
+      padding: 0.7rem;
+      font-size: 1.4rem;
+      margin: 1rem auto;
+    }
+    button {
+      padding: 0.9rem 1.3rem;
+      background-color: rgba(255, 231, 255, 0.075);
+      color: $dark-text;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+// Badge Bar
+.Badge {
+  color: $dark-text;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 0.2rem;
+  &__Detail {
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    background-color: rgba(255, 231, 255, 0.075);
+    margin-left: 0.2rem;
+  }
+  &Bar {
+    display: flex;
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
+// Repo
+.Repo {
+  background-color: rgba(255, 231, 255, 0.075);
+  border-radius: 0.3rem;
+  color: $dark-text;
+  padding: 1rem;
+  width: 100%;
+  &Holder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  &__Language {
+    margin: 0.9rem 0;
+  }
+}
+
+// User
+.User {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: left;
+  margin: auto;
+  &InfoCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    .Profile {
+      grid-column: 1/3;
+      padding: 0.2rem;
+      text-align: center;
+      button {
+        padding: 0.5rem 1rem;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        background-color: rgba(255, 231, 255, 0.075);
+        color: $dark-text;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+  &__Avatar {
+    width: 50%;
+    border-radius: 0.3rem;
+    margin: auto;
+  }
+  &__Info {
+    padding-left: 8rem;
+    color: $dark-text;
+    h2 {
+      margin: 0.5rem 0;
+    }
+  }
+}
