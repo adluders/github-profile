@@ -1,16 +1,16 @@
 import React from "react";
-import Profile from "../../profile.jpg";
+// import Profile from "../../profile.jpg";
 
-const UserDetail = () => {
+const UserDetail = ({ user }) => {
   return (
     <div className="User">
       <div className="User__Avatar">
-        <img src={Profile} alt="User" />
+        <img src={user.avatar_url} alt="User" />
       </div>
       <div className="User__Info">
-        <h1>Name</h1>
-        <h2>UserName</h2>
-        <p>Bio</p>
+        <h1>{user.name}</h1>
+        <h2>{user.login}</h2>
+        <p>{user.bio}</p>
       </div>
     </div>
   );

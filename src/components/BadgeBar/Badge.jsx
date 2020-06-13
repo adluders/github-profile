@@ -1,10 +1,10 @@
 import React from "react";
 
-const Badge = () => {
+const Badge = ({ text, stat }) => {
   return (
     <div className="Badge">
-      <p className="Badge__Info">Follow</p>
-      <p className="Badge__Detail">20</p>
+      <p className="Badge__Info">{text}</p>
+      <p className="Badge__Detail">{stat}</p>
     </div>
   );
 };

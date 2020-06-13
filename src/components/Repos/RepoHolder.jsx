@@ -2,13 +2,19 @@ import React from "react";
 
 import Repo from "./Repo";
 
-const RepoHolder = () => {
+const RepoHolder = ({ user }) => {
+  // const [repos, setRepos] = useState([]);
+
+  // const userRepo = () => {
+  //   fetch(`https://api.github.com/users/defunkt/repos`)
+  //     .then((data) => data.json())
+  //     .then((res) => setRepos(res));
+  // };
+
   return (
     <div className="RepoHolder">
-      <Repo />
-      <Repo />
-      <Repo />
-      <Repo />
+      {user.repos &&
+        user.repos.map((repo) => <Repo key={repo.id} repo={repo} />)}
     </div>
   );
 };
