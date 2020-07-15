@@ -2,20 +2,19 @@ import React from "react";
 import UserDetail from "../components/UserDetail/UserDetail";
 import BadgeBar from "../components/BadgeBar/BadgeBar";
 import RepoHolder from "../components/Repos/RepoHolder";
-import { Link } from "react-router-dom";
 
-const UserInfoCard = ({ user }) => {
+const UserInfoCard = ({ user, repos }) => {
   return (
     <div className="UserInfoCard">
       <UserDetail user={user} />
       <div>
         <BadgeBar user={user} />
-        <RepoHolder user={user} />
+        <RepoHolder repos={repos} />
       </div>
       <div className="Profile">
-        <Link target="_blank" to={`${user.html_url}`}>
+        <a target="_blank" rel="noopener noreferrer" href={`${user.html_url}`}>
           Visit Profile
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -1,0 +1,12 @@
+@media only screen and (max-width: 800px) {
+  .Badge {
+    margin: 0.5rem auto;
+  }
+  .User {
+    &InfoCard {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+}
